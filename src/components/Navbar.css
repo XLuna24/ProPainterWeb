@@ -1,5 +1,6 @@
 .navbar {
-    background: #242424; /*remove when images get added*/
+    /*background: #242424; /*remove when images get added*/
+    margin-top: 40px;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -116,8 +117,8 @@
     }
   
     .navbar-logo {
-      /*position: absolute;*/
-      /*justify-content: center;*/
+      /*position: relative;*/
+      justify-content: center;
       /*align-items: center;*/
       top: 0;
       left: 0;

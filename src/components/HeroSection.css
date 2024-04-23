@@ -1,0 +1,80 @@
+.hero-container {
+    /*background: url('/public/images/ColorHouse.png')
+    center center/cover no-repeat;*/
+    max-height: 1080px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+}
+
+img {
+    position: absolute;
+    top: 0;
+}
+
+.hero-container .front {
+    /*position: absolute;*/
+    margin-top: -60px;
+    /*z-index: 2;*/
+    width: 1240px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-container .behind.left {
+    /*z-index: 1;*/
+    left: 0;
+}
+
+.hero-container .behind.right {
+    /*z-index: 1;*/
+    right: 0;
+}
+
+/*.hero-container h1, .hero-btns {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+}*/
+
+.hero-container > h1 {
+    color: #fff;
+    font-size: 100px;
+    max-width: 1080px;
+    z-index: 10;
+}
+
+.hero-btns {
+    position: relative;
+    margin-top: 40px;
+    z-index: 10;
+}
+
+@media screen and (max-width:960px) {
+    .hero-container > h1 {
+        font-size: 70px;
+        max-width: 750px;
+        z-index: 10;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hero-container > h1 {
+        font-size: 50px;
+        max-width: 500px;
+        z-index: 10;
+    }
+
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
