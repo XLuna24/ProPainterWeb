@@ -1,11 +1,13 @@
 import React from 'react'
 import '../../App.css'
-import HeroSection from '../HeroSection'
+import HeroSection from '../sections/HeroSection'
+import ServiceSection from '../sections/ServiceSection'
 
 function Home () {
     return (
         <>
             <HeroSection/>
+            <ServiceSection/>
         </>
     )
 }
