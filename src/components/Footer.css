@@ -1,0 +1,12 @@
+.footer-container {
+    background: url('/public/images/GrayBackground.png')
+    center center/cover no-repeat;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container > h1 {
+    color: #fff;
+}

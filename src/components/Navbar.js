@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from './Button'
+import { handleScroll } from './Scroll'
 import './Navbar.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,6 +15,11 @@ function Navbar() {
 
     const handleClick = () => setClick(!click)
     const closeMenu = () => setClick(false)
+
+    const scrollTo = (sectionId) => {
+        handleScroll(sectionId)
+        closeMenu()
+    }
 
     const showButton = () => {
         if(window.innerWidth <= 960) {
@@ -33,7 +39,7 @@ function Navbar() {
         <>
             <nav className='navbar'>
                 <div className='navbar-container'>
-                    <Link to='/' className='navbar-logo' onClick={closeMenu}>
+                    <Link to='/' className='navbar-logo' onClick={() => scrollTo('home')}>
                         <img src='images/Logo_web.png' ></img>
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
@@ -42,51 +48,59 @@ function Navbar() {
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
                             <Link
-                            to='/'
+                            href='#home'
                             className='nav-links'
-                            onClick={closeMenu}
+                            onClick={() => scrollTo('home')}
                             >
                                 Home
                             </Link>
                         </li>
                         <li className='nav-item'>
                             <Link
-                            to='/services'
+                            href='#services'
                             className='nav-links'
-                            onClick={closeMenu}
+                            onClick={() => scrollTo('services')}
                             >
                                 Services
                             </Link>
                         </li>
                         <li className='nav-item'>
                             <Link
-                            to='/gallery'
+                            href='#gallery'
                             className='nav-links'
-                            onClick={closeMenu}
+                            onClick={() => scrollTo('gallery')}
                             >
                                 Gallery
                             </Link>
                         </li>
                         <li className='nav-item'>
                             <Link
-                            to='/about-us'
+                            href='#about-us'
                             className='nav-links'
-                            onClick={closeMenu}
+                            onClick={() => scrollTo('about-us')}
                             >
                                 About Us
                             </Link>
                         </li>
                         <li>
                             <Link
-                            to='/contact-us'
+                            href='#contact-us'
                             className='nav-links-mobile'
-                            onClick={closeMenu}
+                            onClick={() => scrollTo('contact-us')}
                             >
                                 contact us
                             </Link>
                         </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>Contact Us</Button>}
+                    {button &&
+                        <Button
+                            buttonStyle='btn--outline'
+                            href='#contact-us'
+                            onClick={() => scrollTo('contact-us')}
+                        >
+                            Contact Us
+                        </Button>
+                    }
                 </div>
             </nav>
         </>

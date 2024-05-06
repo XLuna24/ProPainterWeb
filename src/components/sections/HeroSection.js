@@ -2,6 +2,7 @@ import React from 'react'
 import '../../App.css'
 import { Button } from '../Button'
 import './HeroSection.css'
+import { handleScroll } from '../Scroll'
 
 function HeroSection() {
   return (
@@ -17,6 +18,7 @@ function HeroSection() {
             className='btns'
             buttonStyle='btn--primary'
             buttonSize='btn--large'
+            onClick={() => handleScroll('contact-us')}
             >
                 Contact Us
             </Button>

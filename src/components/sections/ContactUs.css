@@ -1,0 +1,56 @@
+.contact-container {
+    background: url('/public/images/BlueKitchen.png')
+    left/auto 100% repeat-x;
+    height: 90vh;
+    max-height: 650px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form-container {
+    width: 100%;
+    max-width: 1240px;
+    height: 100%;
+    display: flex;
+}
+
+.contact-info {
+    background: #bee4e2;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    object-fit: contain;
+}
+
+.contact-info img {
+    max-width: 300px;
+    display: block;
+}
+
+.contact-info > h1 {
+    font-size: 80px;
+    align-self: flex-start;
+    padding: 0 20px;
+}
+
+.contact-info > h2 {
+    font-size: 70px;
+    padding: 0 100px 20px 100px;
+}
+
+form {
+    background-color: #fff;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
