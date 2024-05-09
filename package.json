@@ -1,5 +1,6 @@
 {
   "name": "luna-paint-web",
+  "homepage": "https://lunapaintingsolutions.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
