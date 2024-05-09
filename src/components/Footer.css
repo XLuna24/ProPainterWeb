@@ -10,3 +10,9 @@
 .footer-container > h1 {
     color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+    .footer-container > h1 {
+        font-size: 20px;
+    }
+}

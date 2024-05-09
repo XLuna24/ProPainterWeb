@@ -62,6 +62,15 @@ img {
 }
 
 @media screen and (max-width:768px) {
+    .hero-container .front {
+        position: absolute;
+        margin-top: -40%;
+        z-index: 2;
+        width: 1240px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .hero-container > h1 {
         font-size: 50px;
         max-width: 500px;
