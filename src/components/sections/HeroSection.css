@@ -1,0 +1,88 @@
+.hero-container {
+    /*background: url('/public/images/ColorHouse.png')
+    center center/cover no-repeat;*/
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    overflow: hidden;
+    margin-top: -120px;
+}
+
+img {
+    top: 0;
+    object-fit: cover;
+}
+
+.hero-container .front {
+    position: absolute;
+    margin-top: -10%;
+    z-index: 2;
+    width: 1240px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-container .behind.left {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+}
+
+.hero-container .behind.right {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+}
+
+.hero-container > h1 {
+    color: #fff;
+    font-size: 100px;
+    max-width: 1080px;
+    z-index: 10;
+}
+
+.hero-btns {
+    position: relative;
+    margin-top: 40px;
+    z-index: 10;
+}
+
+@media screen and (max-width:960px) {
+    .hero-container > h1 {
+        font-size: 70px;
+        max-width: 750px;
+        z-index: 10;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hero-container .front {
+        position: absolute;
+        margin-top: -40%;
+        z-index: 2;
+        width: 1240px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-container > h1 {
+        font-size: 50px;
+        max-width: 500px;
+        z-index: 10;
+    }
+
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
